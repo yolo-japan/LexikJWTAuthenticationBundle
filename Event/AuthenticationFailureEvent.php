@@ -19,7 +19,7 @@ class AuthenticationFailureEvent extends Event
     protected $exception;
 
     /**
-     * @var Response
+     * @var Response|null
      */
     protected $response;
 
@@ -42,7 +42,7 @@ class AuthenticationFailureEvent extends Event
     }
 
     /**
-     * @return Response
+     * @return Response|null
      */
     public function getResponse()
     {
@@ -50,9 +50,9 @@ class AuthenticationFailureEvent extends Event
     }
 
     /**
-     * @param Response $response
+     * @param Response|null $response
      */
-    public function setResponse(Response $response)
+    public function setResponse(Response $response = null)
     {
         $this->response = $response;
     }
